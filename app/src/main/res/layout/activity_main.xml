@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/themetextcolor"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/dataProcessView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="50dp"
+        android:textAlignment="textEnd"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/resultView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/resultView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:visibility="gone"
+        android:textSize="40dp"
+        android:textAlignment="textEnd"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/keypadLL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+    <LinearLayout
+        android:id="@+id/keypadLL"
+        android:layout_width="match_parent"
+        android:layout_height="440dp"
+        android:paddingBottom="10dp"
+        android:orientation="vertical"
+        android:background="@drawable/roundlayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/clearButton"
+                style="@style/allButtons"
+                android:textColor="@color/themetextcolor"
+                android:text="C" />
+
+            <!--            <com.google.android.material.button.MaterialButton-->
+            <!--                android:id="@+id/ButtonOne"-->
+            <!--                app:icon="@drawable/backspace"-->
+            <!--                style="@style/allButtons"-->
+            <!--                android:text="1" />-->
+            <ImageButton
+                android:id="@+id/backspace"
+                android:contentDescription="backspace"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:layout_margin="11dp"
+                android:textColor="@color/themetextcolor"
+                android:background="@drawable/roundcorner"
+                android:backgroundTint="@color/white"
+                app:srcCompat="@drawable/backspace" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/moduleButton"
+                style="@style/allButtons"
+                android:textColor="@color/themetextcolor"
+                android:text="%" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/divideButton"
+                style="@style/allButtons"
+                android:textColor="@color/themetextcolor"
+                android:text="/" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/sevenButton"
+                style="@style/allButtons"
+                android:text="7" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/eightButton"
+                style="@style/allButtons"
+                android:text="8" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/nineButton"
+                style="@style/allButtons"
+                android:text="9" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/mulButton"
+                style="@style/allButtons"
+                android:textColor="@color/themetextcolor"
+                android:text="*" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/fourButton"
+                style="@style/allButtons"
+                android:text="4" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/fiveButton"
+                style="@style/allButtons"
+                android:text="5" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/sixButton"
+                style="@style/allButtons"
+                android:text="6" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/subButton"
+                style="@style/allButtons"
+                android:textColor="@color/themetextcolor"
+                android:text="_" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/oneButton"
+                style="@style/allButtons"
+                android:text="1" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/twoButton"
+                style="@style/allButtons"
+                android:text="2" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/threeButton"
+                style="@style/allButtons"
+                android:text="3" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/plusButton"
+                style="@style/allButtons"
+                android:textColor="@color/themetextcolor"
+                android:text="+" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/allClearButton"
+                style="@style/allButtons"
+                android:layout_height="65dp"
+                android:text="AC"
+                android:textColor="@color/themetextcolor"
+                android:textSize="16sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/zeroButton"
+                style="@style/allButtons"
+                android:text="0" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/decimalButton"
+                style="@style/allButtons"
+                android:text="." />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/equalButton"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:text="="
+                android:background="@drawable/iconcolortheme"
+                app:backgroundTint="@null"
+                android:textColor="@color/white"
+                android:textSize="22sp"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
