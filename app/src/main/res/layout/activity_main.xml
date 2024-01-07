@@ -12,7 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
-        android:textSize="50dp"
+        style="@style/textViewColor"
+        android:textSize="50sp"
         android:textAlignment="textEnd"
         android:layout_marginEnd="20dp"
         app:layout_constraintBottom_toTopOf="@+id/resultView"
@@ -25,8 +26,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
+        style="@style/textViewColor"
         android:visibility="gone"
-        android:textSize="40dp"
+        android:textSize="40sp"
         android:textAlignment="textEnd"
         android:layout_marginEnd="20dp"
         app:layout_constraintBottom_toTopOf="@+id/keypadLL"
@@ -58,7 +60,7 @@
                 android:id="@+id/clearButton"
                 style="@style/allButtons"
                 android:textColor="@color/themetextcolor"
-                android:text="C" />
+                android:text="@string/c" />
 
             <!--            <com.google.android.material.button.MaterialButton-->
             <!--                android:id="@+id/ButtonOne"-->
@@ -67,27 +69,28 @@
             <!--                android:text="1" />-->
             <ImageButton
                 android:id="@+id/backspace"
-                android:contentDescription="backspace"
                 android:layout_width="65dp"
                 android:layout_height="65dp"
                 android:layout_gravity="center"
                 android:layout_margin="11dp"
-                android:textColor="@color/themetextcolor"
                 android:background="@drawable/roundcorner"
                 android:backgroundTint="@color/white"
-                app:srcCompat="@drawable/backspace" />
+                android:contentDescription="@string/backspace"
+                android:textColor="@color/themetextcolor"
+                app:srcCompat="@drawable/backspace"
+                tools:ignore="ImageContrastCheck" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/moduleButton"
                 style="@style/allButtons"
                 android:textColor="@color/themetextcolor"
-                android:text="%" />
+                android:text="@string/module" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/divideButton"
                 style="@style/allButtons"
                 android:textColor="@color/themetextcolor"
-                android:text="/" />
+                android:text="@string/divide" />
 
 
         </LinearLayout>
@@ -101,23 +104,23 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/sevenButton"
                 style="@style/allButtons"
-                android:text="7" />
+                android:text="@string/_7" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/eightButton"
                 style="@style/allButtons"
-                android:text="8" />
+                android:text="@string/_8" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/nineButton"
                 style="@style/allButtons"
-                android:text="9" />
+                android:text="@string/_9" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/mulButton"
                 style="@style/allButtons"
                 android:textColor="@color/themetextcolor"
-                android:text="*" />
+                android:text="@string/star" />
 
         </LinearLayout>
 
@@ -130,23 +133,23 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/fourButton"
                 style="@style/allButtons"
-                android:text="4" />
+                android:text="@string/_4" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/fiveButton"
                 style="@style/allButtons"
-                android:text="5" />
+                android:text="@string/_5" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/sixButton"
                 style="@style/allButtons"
-                android:text="6" />
+                android:text="@string/_6" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/subButton"
                 style="@style/allButtons"
                 android:textColor="@color/themetextcolor"
-                android:text="_" />
+                android:text="@string/minus" />
 
         </LinearLayout>
 
@@ -159,23 +162,23 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/oneButton"
                 style="@style/allButtons"
-                android:text="1" />
+                android:text="@string/_1" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/twoButton"
                 style="@style/allButtons"
-                android:text="2" />
+                android:text="@string/_2" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/threeButton"
                 style="@style/allButtons"
-                android:text="3" />
+                android:text="@string/_3" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/plusButton"
                 style="@style/allButtons"
                 android:textColor="@color/themetextcolor"
-                android:text="+" />
+                android:text="@string/plus" />
 
         </LinearLayout>
 
@@ -189,19 +192,19 @@
                 android:id="@+id/allClearButton"
                 style="@style/allButtons"
                 android:layout_height="65dp"
-                android:text="AC"
-                android:textColor="@color/themetextcolor"
+                android:text="@string/ac"
+                android:textColor="#1976D2"
                 android:textSize="16sp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/zeroButton"
                 style="@style/allButtons"
-                android:text="0" />
+                android:text="@string/_0" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/decimalButton"
                 style="@style/allButtons"
-                android:text="." />
+                android:text="@string/decimal" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/equalButton"
@@ -209,7 +212,7 @@
                 android:layout_height="65dp"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
-                android:text="="
+                android:text="@string/equal"
                 android:background="@drawable/iconcolortheme"
                 app:backgroundTint="@null"
                 android:textColor="@color/white"

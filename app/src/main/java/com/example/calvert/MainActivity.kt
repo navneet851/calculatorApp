@@ -1,6 +1,6 @@
 package com.example.calvert
 
-import android.app.Activity
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -9,15 +9,14 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.calvert.databinding.ActivityMainBinding
 import net.objecthunter.exp4j.Expression
 import net.objecthunter.exp4j.ExpressionBuilder
-import javax.security.auth.login.LoginException
 
 
 open class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
     private lateinit var expression: Expression
-    var lastNumeric = false
-    var stateError = false
-    var lasyDot = false
+    private var lastNumeric = false
+    private var stateError = false
+    private var lastDot = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -71,23 +70,23 @@ open class MainActivity : AppCompatActivity() {
         binding.moduleButton.setOnClickListener {
             binding.moduleButton.operatorButtonEvent()
         }
-        binding.decimalButton.setOnClickListener(){
+        binding.decimalButton.setOnClickListener {
             binding.decimalButton.operatorButtonEvent()
         }
 
-        binding.allClearButton.setOnClickListener(){
+        binding.allClearButton.setOnClickListener {
             binding.resultView.text = ""
             binding.dataProcessView.text = ""
             lastNumeric = false
             stateError = false
-            lasyDot = false
+            lastDot = false
             binding.resultView.visibility = View.GONE
         }
-        binding.clearButton.setOnClickListener() {
+        binding.clearButton.setOnClickListener {
             binding.dataProcessView.text = ""
             lastNumeric = false
         }
-        binding.backspace.setOnClickListener(){
+        binding.backspace.setOnClickListener {
             binding.dataProcessView.text = binding.dataProcessView.text.toString().dropLast(1)
 
             try {
@@ -98,11 +97,11 @@ open class MainActivity : AppCompatActivity() {
             catch (e : Exception){
                 binding.resultView.text = ""
                 binding.resultView.visibility = View.GONE
-                Log.e("last char error", e.toString(), )
+                Log.e("last char error", e.toString())
             }
         }
 
-        binding.equalButton.setOnClickListener(){
+        binding.equalButton.setOnClickListener {
 
             onEqualClick()
             binding.resultView.textSize = 50.0f
@@ -112,6 +111,7 @@ open class MainActivity : AppCompatActivity() {
 
     }
 
+    @SuppressLint("SetTextI18n")
     fun onEqualClick(){
         if(lastNumeric && !stateError){
             val txt = binding.dataProcessView.text.toString()
@@ -131,7 +131,7 @@ open class MainActivity : AppCompatActivity() {
                     expression.evaluate()
 
                 binding.resultView.visibility = View.VISIBLE
-                binding.resultView.text = "="+result.toString()
+                binding.resultView.text = "=$result"
                 binding.resultView.textSize = 40.0f
                 binding.dataProcessView.textSize = 50.0f
             }
@@ -147,7 +147,7 @@ open class MainActivity : AppCompatActivity() {
     private fun Button.operatorButtonEvent(){
         if (!stateError && lastNumeric){
             binding.dataProcessView.append(this.text.toString())
-            lasyDot = false
+            lastDot = false
             lastNumeric = false
             onEqualClick()
         }
