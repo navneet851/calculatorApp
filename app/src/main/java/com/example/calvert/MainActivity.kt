@@ -1,6 +1,5 @@
 package com.example.calvert
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -111,8 +110,7 @@ open class MainActivity : AppCompatActivity() {
 
     }
 
-    @SuppressLint("SetTextI18n")
-    fun onEqualClick(){
+    private fun onEqualClick(){
         if(lastNumeric && !stateError){
             val txt = binding.dataProcessView.text.toString()
             fun isInt() : Boolean{

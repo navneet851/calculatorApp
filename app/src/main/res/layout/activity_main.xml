@@ -2,20 +2,19 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/themetextcolor"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/dataProcessView"
+        style="@style/textViewColor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""
-        style="@style/textViewColor"
-        android:textSize="45sp"
-        android:textAlignment="textEnd"
         android:layout_marginEnd="20dp"
+        android:text=""
+        android:textAlignment="textEnd"
+        android:textSize="45sp"
         app:layout_constraintBottom_toTopOf="@+id/resultView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -23,28 +22,27 @@
 
     <TextView
         android:id="@+id/resultView"
+        style="@style/textViewColor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""
-        style="@style/textViewColor"
-        android:visibility="gone"
-        android:textSize="35sp"
-        android:textAlignment="textEnd"
         android:layout_marginEnd="20dp"
+        android:text=""
+        android:textAlignment="textEnd"
+        android:textSize="35sp"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/keypadLL"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
 
-
     <LinearLayout
         android:id="@+id/keypadLL"
         android:layout_width="match_parent"
         android:layout_height="440dp"
-        android:paddingBottom="10dp"
-        android:orientation="vertical"
         android:background="@drawable/roundlayout"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -59,8 +57,8 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/clearButton"
                 style="@style/allButtons"
-                android:textColor="@color/themetextcolor"
-                android:text="@string/c" />
+                android:text="@string/c"
+                android:textColor="@color/themetextcolor" />
 
             <!--            <com.google.android.material.button.MaterialButton-->
             <!--                android:id="@+id/ButtonOne"-->
@@ -69,12 +67,12 @@
             <!--                android:text="1" />-->
             <ImageButton
                 android:id="@+id/backspace"
+                style="@style/backspaceButtonColor"
                 android:layout_width="65dp"
                 android:layout_height="65dp"
                 android:layout_gravity="center"
                 android:layout_margin="11dp"
                 android:background="@drawable/roundcorner"
-                style="@style/backspaceButtonColor"
                 android:contentDescription="@string/backspace"
                 android:textColor="@color/themetextcolor"
                 app:srcCompat="@drawable/backspace"
@@ -83,14 +81,14 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/moduleButton"
                 style="@style/allButtons"
-                android:textColor="@color/themetextcolor"
-                android:text="@string/module" />
+                android:text="@string/module"
+                android:textColor="@color/themetextcolor" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/divideButton"
                 style="@style/allButtons"
-                android:textColor="@color/themetextcolor"
-                android:text="@string/divide" />
+                android:text="@string/divide"
+                android:textColor="@color/themetextcolor" />
 
 
         </LinearLayout>
@@ -119,8 +117,8 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/mulButton"
                 style="@style/allButtons"
-                android:textColor="@color/themetextcolor"
-                android:text="@string/star" />
+                android:text="@string/star"
+                android:textColor="@color/themetextcolor" />
 
         </LinearLayout>
 
@@ -149,8 +147,8 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/subButton"
                 style="@style/allButtons"
-                android:textColor="@color/themetextcolor"
-                android:text="@string/minus" />
+                android:text="@string/minus"
+                android:textColor="@color/themetextcolor" />
 
         </LinearLayout>
 
@@ -178,8 +176,8 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/plusButton"
                 style="@style/allButtons"
-                android:textColor="@color/themetextcolor"
-                android:text="@string/plus" />
+                android:text="@string/plus"
+                android:textColor="@color/themetextcolor" />
 
         </LinearLayout>
 
@@ -213,11 +211,11 @@
                 android:layout_height="65dp"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
-                android:text="@string/equal"
                 android:background="@drawable/iconcolortheme"
-                app:backgroundTint="@null"
+                android:text="@string/equal"
                 android:textColor="@color/white"
-                android:textSize="22sp"/>
+                android:textSize="22sp"
+                app:backgroundTint="@null" />
 
         </LinearLayout>
 
