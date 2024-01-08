@@ -104,8 +104,8 @@ open class MainActivity : AppCompatActivity() {
         binding.equalButton.setOnClickListener {
 
             onEqualClick()
-            binding.resultView.textSize = 50.0f
-            binding.dataProcessView.textSize = 40.0f
+            binding.resultView.textSize = 45.0f
+            binding.dataProcessView.textSize = 35.0f
             binding.dataProcessView.text = binding.resultView.text.toString().drop(1)
         }
 
@@ -132,8 +132,8 @@ open class MainActivity : AppCompatActivity() {
 
                 binding.resultView.visibility = View.VISIBLE
                 binding.resultView.text = "=$result"
-                binding.resultView.textSize = 40.0f
-                binding.dataProcessView.textSize = 50.0f
+                binding.resultView.textSize = 35.0f
+                binding.dataProcessView.textSize = 45.0f
             }
             catch (e : ArithmeticException){
                 Log.e("finalResultError", e.toString() )

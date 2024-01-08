@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:text=""
         style="@style/textViewColor"
-        android:textSize="50sp"
+        android:textSize="45sp"
         android:textAlignment="textEnd"
         android:layout_marginEnd="20dp"
         app:layout_constraintBottom_toTopOf="@+id/resultView"
@@ -28,7 +28,7 @@
         android:text=""
         style="@style/textViewColor"
         android:visibility="gone"
-        android:textSize="40sp"
+        android:textSize="35sp"
         android:textAlignment="textEnd"
         android:layout_marginEnd="20dp"
         app:layout_constraintBottom_toTopOf="@+id/keypadLL"
@@ -74,7 +74,7 @@
                 android:layout_gravity="center"
                 android:layout_margin="11dp"
                 android:background="@drawable/roundcorner"
-                android:backgroundTint="@color/white"
+                style="@style/backspaceButtonColor"
                 android:contentDescription="@string/backspace"
                 android:textColor="@color/themetextcolor"
                 app:srcCompat="@drawable/backspace"
@@ -133,7 +133,8 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/fourButton"
                 style="@style/allButtons"
-                android:text="@string/_4" />
+                android:text="@string/_4"
+                android:textStyle="" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/fiveButton"
