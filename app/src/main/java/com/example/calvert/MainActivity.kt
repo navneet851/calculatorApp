@@ -121,6 +121,8 @@ open class MainActivity : AppCompatActivity() {
                 return true
             }
             expression = ExpressionBuilder(txt).build()
+            binding.resultView.textSize = 35.0f
+            binding.dataProcessView.textSize = 45.0f
 
             try {
                 val result = if (isInt())
@@ -130,12 +132,10 @@ open class MainActivity : AppCompatActivity() {
 
                 binding.resultView.visibility = View.VISIBLE
                 binding.resultView.text = "=$result"
-                binding.resultView.textSize = 35.0f
-                binding.dataProcessView.textSize = 45.0f
             }
             catch (e : ArithmeticException){
                 Log.e("finalResultError", e.toString() )
-                binding.resultView.text = "Enter Valid Expression"
+                binding.resultView.text = "InValid Expression"
                 lastNumeric = false
                 stateError = true
             }
